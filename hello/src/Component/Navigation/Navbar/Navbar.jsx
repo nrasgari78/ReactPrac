@@ -1,12 +1,21 @@
 import React from "react";
 import NavItem from "../NavItem/NavItem";
-const Navbar=()=>{
+const Navbar=(props)=>{
+
     return(
         <header>
+            <ul style={{listStyle:"none",display:"flex"}}>
+            {
+            props.data.map((item)=>{
+       return(
+           <li key={item.index}>
             <NavItem
-                menu1={'shoping1'}
-                menu2={'shoping2'}
-            ></NavItem>
+                menu1={item.title}
+            />
+           </li>
+       )
+            })}
+            </ul>
         </header>
     )
 }
