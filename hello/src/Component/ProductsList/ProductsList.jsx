@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
 import Product from "../Product/Product";
 const ProductsList=(props)=>{
     let  imgUrl="https://picsum.photos/200/300";
@@ -10,6 +10,8 @@ const ProductsList=(props)=>{
         setcountstate({count: countstate.count-1})
 
     }
+
+
 
     return(
         <div>
@@ -24,7 +26,7 @@ const ProductsList=(props)=>{
                     price={item.price}
                     key={item.index}
                     remove={()=>props.del(item.index)}
-                    update={()=>props.InputUpdate}
+                    InputUpdate={props.changeInput}
                                      >yohoooooooooo</Product>
             })}
 
